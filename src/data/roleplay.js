@@ -407,7 +407,7 @@ export const roleplayData = [
     scenario:
       "Using warm oils, lotions, and fingertips as the brushes, the artist paints invisible sensual masterpieces across every curve, sensitive crest, and hollow of the partner's bare body.",
     instructions:
-      "Pour warm lotion or oil into your hands and slowly trace artistic lines across Player Two's breasts/chest, stomach, buttocks, and inner thighs, letting the slick glide turn into a full-body erotic massage and sex.",
+      "Pour warm lotion or cold water into your hands and slowly trace artistic lines across Player Two's breasts/chest, stomach, buttocks, and inner thighs, letting the slick glide turn into a full-body erotic massage and sex.",
   },
   {
     id: 42,
