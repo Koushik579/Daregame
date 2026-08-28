@@ -1,0 +1,2407 @@
+/* =========================================
+   APP
+========================================= */
+
+.landing-page,
+.category-page {
+  position: relative;
+  min-height: 100dvh;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(180, 0, 35, 0.13),
+      transparent 38%
+    ),
+    #060606;
+}
+
+.landing-container,
+.category-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1100px, calc(100% - 40px));
+  min-height: 100dvh;
+
+  margin: 0 auto;
+
+  padding-top: max(30px, env(safe-area-inset-top));
+  padding-bottom: max(30px, env(safe-area-inset-bottom));
+}
+
+/* =========================================
+   AMBIENT LIGHT
+========================================= */
+
+.ambient {
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(130px);
+
+  opacity: 0.16;
+}
+
+.ambient-one {
+  top: -280px;
+  left: -180px;
+
+  background: #e00032;
+}
+
+.ambient-two {
+  right: -250px;
+  bottom: -300px;
+
+  background: #8d001d;
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #f2f2f2;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.logo-heart {
+  color: #f0143d;
+  font-size: 18px;
+}
+
+/* =========================================
+   LANDING
+========================================= */
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero {
+  max-width: 780px;
+
+  margin-top: clamp(70px, 12vh, 130px);
+}
+
+.eyebrow {
+  margin-bottom: 18px;
+
+  color: #ef173e;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.hero h1,
+.category-header h1 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(56px, 8vw, 94px);
+  font-weight: 600;
+  line-height: 0.9;
+
+  letter-spacing: -1.5px;
+
+  color: #f5f5f5;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.hero h1 span,
+.category-header h1 span {
+  color: #f0143d;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.hero p {
+  max-width: 520px;
+
+  margin-top: 28px;
+
+  color: #a0a0a0;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   PLAYER FORM
+========================================= */
+
+.players-form {
+  display: grid;
+  grid-template-columns: 1fr 40px 1fr;
+  align-items: end;
+
+  width: min(700px, 100%);
+
+  margin-top: 52px;
+
+  gap: 24px;
+}
+
+.player-field label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #8b8b8b;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.player-field input {
+  width: 100%;
+
+  padding: 12px 2px;
+
+  border: 0;
+  border-bottom: 1px solid #343434;
+  border-radius: 0;
+
+  outline: none;
+
+  background: transparent;
+  color: white;
+
+  font-size: 16px;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.player-field input::placeholder {
+  color: #666;
+}
+
+.player-field input:focus {
+  border-bottom-color: #f0143d;
+
+  box-shadow:
+    0 1px 0 #f0143d;
+}
+
+.versus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+
+  margin-bottom: 3px;
+
+  border: 1px solid #303030;
+  border-radius: 50%;
+
+  color: #ef173e;
+}
+
+.versus span {
+  font-size: 17px;
+}
+
+/* =========================================
+   START BUTTON
+========================================= */
+
+.start-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+
+  width: fit-content;
+  min-height: 52px;
+
+  margin-top: 42px;
+  padding: 0 21px;
+
+  border: 0;
+
+  background: #df0a34;
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.start-button:hover:not(:disabled) {
+  background: #f0143d;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 35px rgba(223, 10, 52, 0.25);
+}
+
+.start-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.start-button:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.button-arrow {
+  font-size: 19px;
+}
+
+.privacy-note {
+  margin-top: 25px;
+
+  color: #626262;
+
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+/* =========================================
+   CATEGORY PAGE
+========================================= */
+
+.category-container {
+  padding-top: max(35px, env(safe-area-inset-top));
+}
+
+.category-header {
+  margin-top: clamp(70px, 10vh, 100px);
+}
+
+.category-header p {
+  margin-top: 20px;
+
+  color: #9a9a9a;
+
+  font-size: 13px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 16px;
+
+  margin-top: 50px;
+}
+
+/* =========================================
+   CATEGORY CARD
+========================================= */
+
+.category-card {
+  position: relative;
+
+  min-height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 28px;
+
+  overflow: hidden;
+
+  border: 1px solid #282828;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.008)
+    );
+
+  color: white;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.category-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  right: -100px;
+  top: -100px;
+
+  border-radius: 50%;
+
+  background: #c9002c;
+
+  filter: blur(70px);
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #7d1227;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(140, 0, 30, 0.16),
+      rgba(255, 255, 255, 0.02)
+    );
+}
+
+.category-card:hover::before {
+  opacity: 0.7;
+}
+
+.category-number {
+  position: absolute;
+
+  top: 22px;
+  right: 24px;
+
+  color: #404040;
+
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.category-icon {
+  position: absolute;
+
+  top: 22px;
+  left: 26px;
+
+  color: #e50937;
+
+  font-size: 23px;
+}
+
+.category-content {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.category-title {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 42px;
+  font-weight: 600;
+
+  line-height: 0.95;
+}
+
+.category-description {
+  max-width: 220px;
+
+  margin-top: 10px;
+
+  color: #919191;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.category-arrow {
+  position: absolute;
+
+  right: 25px;
+  bottom: 25px;
+
+  color: #777;
+
+  font-size: 18px;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.category-card:hover .category-arrow {
+  color: #ef173e;
+  transform: translate(2px, -2px);
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .landing-container,
+  .category-container {
+    width: calc(100% - 30px);
+  }
+
+  .hero {
+    margin-top: 80px;
+  }
+
+  .hero h1,
+  .category-header h1 {
+    font-size: clamp(52px, 15vw, 72px);
+    letter-spacing: -1px;
+  }
+
+  .hero p {
+    max-width: 430px;
+
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .players-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    width: 100%;
+
+    gap: 20px;
+
+    margin-top: 45px;
+  }
+
+  .player-field input {
+    min-height: 48px;
+  }
+
+  .versus {
+    align-self: center;
+
+    width: 32px;
+    height: 32px;
+
+    margin: 0;
+  }
+
+  .start-button {
+    width: 100%;
+    min-height: 56px;
+
+    margin-top: 20px;
+  }
+
+  .privacy-note {
+    margin-bottom: 20px;
+  }
+
+  .category-header {
+    margin-top: 70px;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    margin-top: 38px;
+
+    padding-bottom: 30px;
+  }
+
+  .category-card {
+    min-height: 190px;
+
+    padding: 25px;
+  }
+
+  .category-title {
+    font-size: 38px;
+  }
+}
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+  .landing-container,
+  .category-container {
+    width: calc(100% - 24px);
+  }
+
+  .hero {
+    margin-top: 65px;
+  }
+
+  .hero h1,
+  .category-header h1 {
+    font-size: 49px;
+  }
+
+  .hero p {
+    font-size: 12px;
+  }
+
+  .category-card {
+    min-height: 175px;
+  }
+}
+
+/* =========================================
+   REDUCE MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+
+/* =========================================
+   GAME PAGE
+========================================= */
+
+.game-page {
+  position: relative;
+  min-height: 100dvh;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(180, 0, 35, 0.13),
+      transparent 38%
+    ),
+    #060606;
+}
+
+.game-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1000px, calc(100% - 40px));
+  min-height: 100dvh;
+
+  margin: auto;
+
+  padding-top: max(30px, env(safe-area-inset-top));
+  padding-bottom: max(30px, env(safe-area-inset-bottom));
+}
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.game-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.back-button {
+  min-height: 40px;
+
+  padding: 0 14px;
+
+  border: 1px solid #292929;
+
+  background: transparent;
+  color: #9a9a9a;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.back-button:hover {
+  color: white;
+  border-color: #777;
+}
+
+/* =========================================
+   GAME CONTENT
+========================================= */
+
+.game-content {
+  width: min(760px, 100%);
+
+  margin: 0 auto;
+
+  padding-top: clamp(80px, 13vh, 130px);
+}
+
+.game-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #777;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.game-meta span:first-child {
+  color: #e50937;
+}
+
+/* =========================================
+   TURN HEADING
+========================================= */
+
+.turn-heading {
+  margin-top: 24px;
+}
+
+.turn-small {
+  display: block;
+
+  color: #9a9a9a;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.turn-heading h1 {
+  margin-top: 14px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(55px, 9vw, 90px);
+  font-weight: 600;
+  line-height: 0.9;
+
+  letter-spacing: -2px;
+}
+
+.turn-heading h1 span {
+  color: #e50937;
+  font-style: italic;
+}
+
+.turn-heading p {
+  margin-top: 20px;
+
+  color: #9a9a9a;
+
+  font-size: 13px;
+}
+
+/* =========================================
+   TRUTH / DARE
+========================================= */
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 15px;
+
+  margin-top: 50px;
+}
+
+.choice-card {
+  position: relative;
+
+  min-height: 270px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  padding: 30px;
+
+  overflow: hidden;
+
+  border: 1px solid #292929;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.008)
+    );
+
+  color: white;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.choice-card:hover {
+  transform: translateY(-5px);
+}
+
+.truth-card:hover {
+  border-color: #6f2634;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(100, 10, 30, 0.15),
+      rgba(255, 255, 255, 0.02)
+    );
+}
+
+.dare-card:hover {
+  border-color: #b10a2d;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(180, 0, 35, 0.18),
+      rgba(255, 255, 255, 0.02)
+    );
+}
+
+.choice-symbol {
+  position: absolute;
+
+  top: 25px;
+  left: 28px;
+
+  color: #e50937;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 42px;
+}
+
+.choice-title {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 48px;
+  font-weight: 600;
+
+  line-height: 0.9;
+}
+
+.choice-description {
+  margin-top: 12px;
+
+  color: #8f8f8f;
+
+  font-size: 11px;
+}
+
+.choice-arrow {
+  position: absolute;
+
+  right: 27px;
+  bottom: 27px;
+
+  color: #777;
+
+  font-size: 18px;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.choice-card:hover .choice-arrow {
+  color: #e50937;
+
+  transform: translateX(3px);
+}
+
+/* =========================================
+   CHALLENGE
+========================================= */
+
+.challenge-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+}
+
+.challenge-label {
+  color: #e50937;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.challenge-card {
+  width: 100%;
+
+  margin-top: 24px;
+  padding: clamp(35px, 6vw, 65px);
+
+  border: 1px solid #292929;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(170, 0, 35, 0.11),
+      transparent 55%
+    ),
+    #0b0b0b;
+
+  text-align: center;
+}
+
+.challenge-player {
+  display: block;
+
+  margin-bottom: 28px;
+
+  color: #898989;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.challenge-card p {
+  max-width: 650px;
+
+  margin: auto;
+
+  font-family: "Cormorant Garamond", serif;
+
+  color: #f2f2f2;
+
+  font-size: clamp(28px, 4vw, 43px);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.done-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: min(300px, 100%);
+  min-height: 55px;
+
+  margin-top: 25px;
+  padding: 0 20px;
+
+  background: #e50937;
+  color: white;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.done-button:hover {
+  background: #f0143d;
+  transform: translateY(-2px);
+}
+
+.done-button span {
+  font-size: 18px;
+}
+
+/* =========================================
+   GAME MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .game-container {
+    width: calc(100% - 30px);
+  }
+
+  .game-content {
+    padding-top: 75px;
+  }
+
+  .game-meta {
+    font-size: 8px;
+  }
+
+  .turn-heading h1 {
+    font-size: clamp(50px, 14vw, 70px);
+
+    letter-spacing: -1px;
+  }
+
+  .choice-grid {
+    grid-template-columns: 1fr;
+
+    margin-top: 38px;
+  }
+
+  .choice-card {
+    min-height: 190px;
+
+    padding: 25px;
+  }
+
+  .choice-symbol {
+    top: 20px;
+    left: 23px;
+
+    font-size: 35px;
+  }
+
+  .choice-title {
+    font-size: 40px;
+  }
+
+  .challenge-card {
+    padding: 38px 22px;
+  }
+
+  .challenge-card p {
+    font-size: clamp(28px, 8vw, 38px);
+  }
+
+  .done-button {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+  .game-container {
+    width: calc(100% - 24px);
+  }
+
+  .game-content {
+    padding-top: 60px;
+  }
+
+  .choice-card {
+    min-height: 175px;
+  }
+
+  .challenge-card {
+    padding: 30px 18px;
+  }
+}
+
+/* =========================================
+   ROLEPLAY
+========================================= */
+
+.roleplay-page {
+  position: relative;
+  min-height: 100dvh;
+  overflow-x: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(180, 0, 35, 0.14),
+      transparent 40%
+    ),
+    #060606;
+}
+
+.roleplay-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1000px, calc(100% - 40px));
+  min-height: 100dvh;
+
+  margin: auto;
+
+  padding-top: max(30px, env(safe-area-inset-top));
+  padding-bottom: max(40px, env(safe-area-inset-bottom));
+}
+
+/* =========================================
+   ROLEPLAY INTRO
+========================================= */
+
+.roleplay-intro {
+  width: min(760px, 100%);
+
+  margin: 0 auto;
+
+  padding-top: clamp(80px, 13vh, 130px);
+}
+
+.roleplay-heading {
+  margin-top: 25px;
+}
+
+.roleplay-heading h1 {
+  margin-top: 15px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(58px, 9vw, 94px);
+  font-weight: 600;
+  line-height: 0.88;
+
+  letter-spacing: -2px;
+}
+
+.roleplay-heading h1 span {
+  color: #e50937;
+  font-style: italic;
+}
+
+.roleplay-heading p {
+  margin-top: 25px;
+
+  color: #9a9a9a;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.roleplay-start {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: min(340px, 100%);
+  min-height: 56px;
+
+  margin-top: 45px;
+  padding: 0 20px;
+
+  background: #e50937;
+  color: white;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.roleplay-start:hover {
+  background: #f0143d;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 15px 40px rgba(229, 9, 55, 0.25);
+}
+
+.roleplay-start span:last-child {
+  font-size: 18px;
+}
+
+/* =========================================
+   ROLEPLAY RESULT
+========================================= */
+
+.roleplay-result {
+  width: min(760px, 100%);
+
+  margin: 0 auto;
+
+  padding-top: clamp(70px, 10vh, 110px);
+}
+
+.roleplay-result-header h1 {
+  margin-top: 12px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(48px, 7vw, 72px);
+  font-weight: 600;
+  line-height: 0.95;
+
+  color: #f4f4f4;
+}
+
+/* =========================================
+   ROLES
+========================================= */
+
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin-top: 35px;
+}
+
+.role-box {
+  min-height: 135px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 22px;
+
+  border: 1px solid #292929;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.01)
+    );
+}
+
+.role-label {
+  margin-bottom: 12px;
+
+  color: #e50937;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.role-box strong {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 27px;
+  font-weight: 600;
+
+  color: #eee;
+}
+
+/* =========================================
+   SCENARIO / INSTRUCTIONS
+========================================= */
+
+.scenario-box,
+.instructions-box {
+  margin-top: 12px;
+
+  padding: 27px;
+
+  border: 1px solid #292929;
+
+  background: #0a0a0a;
+}
+
+.instructions-box {
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(170, 0, 35, 0.08),
+      transparent 50%
+    ),
+    #0a0a0a;
+}
+
+.section-label {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: #e50937;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.scenario-box p,
+.instructions-box p {
+  color: #b1b1b1;
+
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   ROLEPLAY ACTIONS
+========================================= */
+
+.roleplay-actions {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 25px;
+
+  padding-bottom: 20px;
+}
+
+.another-button,
+.finish-button {
+  min-height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 18px;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.another-button {
+  flex: 1;
+
+  border: 1px solid #343434;
+
+  background: transparent;
+  color: #aaa;
+}
+
+.another-button:hover {
+  border-color: #898989;
+  color: white;
+}
+
+.another-button span {
+  color: #e50937;
+  font-size: 18px;
+}
+
+.finish-button {
+  flex: 1;
+
+  border: 1px solid #e50937;
+
+  background: #e50937;
+  color: white;
+}
+
+.finish-button:hover {
+  background: #f0143d;
+
+  transform: translateY(-2px);
+}
+
+.finish-button span {
+  font-size: 17px;
+}
+
+/* =========================================
+   ROLEPLAY MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .roleplay-container {
+    width: calc(100% - 30px);
+  }
+
+  .roleplay-intro {
+    padding-top: 75px;
+  }
+
+  .roleplay-heading h1 {
+    font-size: clamp(52px, 15vw, 72px);
+
+    letter-spacing: -1px;
+  }
+
+  .roleplay-start {
+    width: 100%;
+  }
+
+  .roleplay-result {
+    padding-top: 65px;
+  }
+
+  .roleplay-result-header h1 {
+    font-size: clamp(45px, 12vw, 65px);
+  }
+
+  .roles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .role-box {
+    min-height: 115px;
+  }
+
+  .scenario-box,
+  .instructions-box {
+    padding: 23px 20px;
+  }
+
+  .scenario-box p,
+  .instructions-box p {
+    font-size: 12px;
+    line-height: 1.75;
+  }
+
+  .roleplay-actions {
+    flex-direction: column;
+  }
+
+  .another-button,
+  .finish-button {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+  .roleplay-container {
+    width: calc(100% - 24px);
+  }
+
+  .roleplay-intro {
+    padding-top: 60px;
+  }
+
+  .roleplay-heading h1 {
+    font-size: 49px;
+  }
+
+  .role-box {
+    min-height: 105px;
+
+    padding: 19px;
+  }
+}
+
+/* =========================================
+   CATEGORY TOPBAR
+========================================= */
+
+.category-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =========================================
+   GAME FOOTER
+========================================= */
+
+.game-footer {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 35px;
+  padding-bottom: 20px;
+}
+
+.restart-button {
+  border: 0;
+
+  background: transparent;
+  color: #444;
+
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.restart-button:hover {
+  color: #e50937;
+}
+
+/* =========================================
+   EXTRA MOBILE POLISH
+========================================= */
+
+@media (max-width: 700px) {
+  .category-topbar {
+    width: 100%;
+  }
+
+  .back-button {
+    min-height: 44px;
+    padding: 0 12px;
+  }
+
+  .game-footer {
+    margin-top: 28px;
+  }
+}
+
+/* =========================================
+   TOUCH DEVICES
+========================================= */
+
+@media (hover: none) {
+  .category-card:hover,
+  .choice-card:hover,
+  .start-button:hover,
+  .roleplay-start:hover,
+  .finish-button:hover {
+    transform: none;
+  }
+
+  .category-card:active,
+  .choice-card:active {
+    transform: scale(0.985);
+  }
+
+  .start-button:active:not(:disabled),
+  .roleplay-start:active,
+  .finish-button:active {
+    transform: scale(0.985);
+  }
+}
+
+/* =========================================
+   TYPOGRAPHY — GLOBAL VISIBILITY FIX
+   ========================================= */
+
+body,
+button,
+input {
+  font-family: "Manrope", sans-serif;
+}
+
+.hero h1,
+.category-header h1,
+.category-title,
+.turn-heading h1,
+.choice-symbol,
+.choice-title,
+.challenge-card p,
+.roleplay-heading h1,
+.roleplay-result-header h1,
+.role-box strong {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Large editorial headings */
+.hero h1,
+.category-header h1,
+.turn-heading h1,
+.roleplay-heading h1 {
+  color: #f7f7f7;
+}
+
+/* Supporting copy should remain soft, but clearly readable */
+.hero p,
+.category-header p,
+.turn-heading p,
+.roleplay-heading p,
+.category-description,
+.choice-description,
+.scenario-box p,
+.instructions-box p {
+  font-family: "Manrope", sans-serif;
+  color: #9a9a9a;
+  font-weight: 500;
+}
+
+/* Inputs need enough contrast against the dark background */
+.player-field input {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  color: #f5f5f5;
+}
+
+.player-field input::placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+/* Small labels remain bold and sharp */
+.eyebrow,
+.player-field label,
+.privacy-note,
+.game-meta,
+.turn-small,
+.challenge-label,
+.challenge-player,
+.role-label,
+.section-label,
+.logo,
+.start-button,
+.back-button,
+.done-button,
+.roleplay-start,
+.another-button,
+.finish-button,
+.restart-button {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Keep the red emphasis crisp */
+.hero h1 span,
+.category-header h1 span,
+.turn-heading h1 span,
+.roleplay-heading h1 span {
+  font-weight: 600;
+  color: #f0143d;
+}
+
+
+/* =========================================
+   ROLEPLAY TYPOGRAPHY — READABILITY FIX
+========================================= */
+
+.roleplay-result-header h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(52px, 7vw, 78px);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -1px;
+  color: #f7f7f7;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Player role cards */
+
+.role-box {
+  padding: 28px;
+}
+
+.role-label {
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: #e50937;
+}
+
+.role-box strong {
+  display: block;
+
+  margin-top: 4px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(28px, 3vw, 36px);
+  font-weight: 600;
+  line-height: 1.05;
+
+  color: #f4f4f4;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scenario / instructions */
+
+.scenario-box,
+.instructions-box {
+  padding: 32px;
+}
+
+.section-label {
+  margin-bottom: 18px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+
+  color: #f0143d;
+}
+
+.scenario-box p,
+.instructions-box p {
+  max-width: 680px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8;
+
+  color: #a8a8a8;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================================
+   ROLEPLAY MOBILE TYPOGRAPHY
+========================================= */
+
+@media (max-width: 700px) {
+  .roleplay-result-header h1 {
+    font-size: clamp(46px, 13vw, 64px);
+    line-height: 0.95;
+  }
+
+  .roles-grid {
+    gap: 10px;
+  }
+
+  .role-box {
+    min-height: 125px;
+    padding: 24px 22px;
+  }
+
+  .role-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .role-box strong {
+    font-size: 30px;
+    line-height: 1.05;
+  }
+
+  .scenario-box,
+  .instructions-box {
+    padding: 26px 22px;
+  }
+
+  .section-label {
+    margin-bottom: 15px;
+    font-size: 9px;
+    letter-spacing: 2.5px;
+  }
+
+  .scenario-box p,
+  .instructions-box p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+}
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+  .roleplay-result-header h1 {
+    font-size: 45px;
+  }
+
+  .role-box {
+    min-height: 115px;
+    padding: 21px 19px;
+  }
+
+  .role-box strong {
+    font-size: 27px;
+  }
+
+  .scenario-box,
+  .instructions-box {
+    padding: 23px 19px;
+  }
+
+  .scenario-box p,
+  .instructions-box p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+/* =========================================
+   MOTION SYSTEM
+========================================= */
+
+:root {
+  --motion-fast: 180ms;
+  --motion-normal: 320ms;
+  --motion-slow: 650ms;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =========================================
+   AMBIENT BACKGROUND
+========================================= */
+
+.ambient {
+  animation: ambientFloat 12s ease-in-out infinite alternate;
+}
+
+.ambient-one {
+  animation-delay: -4s;
+}
+
+.ambient-two {
+  animation-delay: -8s;
+}
+
+@keyframes ambientFloat {
+  0% {
+    transform: translate3d(-15px, -10px, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(20px, 15px, 0) scale(1.08);
+  }
+
+  100% {
+    transform: translate3d(-5px, 25px, 0) scale(0.96);
+  }
+}
+
+/* =========================================
+   PAGE ENTRANCE
+========================================= */
+
+.landing-container,
+.category-container,
+.game-content,
+.roleplay-intro,
+.roleplay-result {
+  animation: pageEnter 650ms var(--ease-out) both;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+  animation: logoEnter 700ms var(--ease-out) both;
+}
+
+.logo-heart {
+  animation: heartPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes logoEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heartPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+
+  50% {
+    transform: scale(1.14);
+    opacity: 1;
+  }
+}
+
+/* =========================================
+   HERO STAGGER
+========================================= */
+
+.hero .eyebrow {
+  animation: contentReveal 600ms 100ms var(--ease-out) both;
+}
+
+.hero h1 {
+  animation: contentReveal 700ms 180ms var(--ease-out) both;
+}
+
+.hero p {
+  animation: contentReveal 700ms 280ms var(--ease-out) both;
+}
+
+.players-form {
+  animation: contentReveal 700ms 380ms var(--ease-out) both;
+}
+
+.privacy-note {
+  animation: contentReveal 600ms 500ms var(--ease-out) both;
+}
+
+@keyframes contentReveal {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   INPUT FOCUS
+========================================= */
+
+.player-field {
+  position: relative;
+}
+
+.player-field::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 1px;
+
+  background: #f0143d;
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition: transform var(--motion-normal) var(--ease-out);
+
+  pointer-events: none;
+}
+
+.player-field:focus-within::after {
+  transform: scaleX(1);
+}
+
+/* =========================================
+   START BUTTON
+========================================= */
+
+.start-button:not(:disabled) {
+  position: relative;
+  overflow: hidden;
+}
+
+.start-button:not(:disabled)::before,
+.roleplay-start::before,
+.finish-button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: -100%;
+
+  width: 60%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.18),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  transition: left 700ms ease;
+}
+
+.start-button:not(:disabled):hover::before,
+.roleplay-start:hover::before,
+.finish-button:hover::before {
+  left: 140%;
+}
+
+.start-button,
+.roleplay-start,
+.finish-button {
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================================
+   CATEGORY CARDS
+========================================= */
+
+.category-card {
+  animation: cardEnter 600ms var(--ease-out) both;
+}
+
+.category-card:nth-child(1) {
+  animation-delay: 100ms;
+}
+
+.category-card:nth-child(2) {
+  animation-delay: 170ms;
+}
+
+.category-card:nth-child(3) {
+  animation-delay: 240ms;
+}
+
+.category-card:nth-child(4) {
+  animation-delay: 310ms;
+}
+
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.category-card:hover {
+  transform: translateY(-7px);
+}
+
+.category-card:active {
+  transform: scale(0.985);
+}
+
+.category-icon {
+  transition:
+    transform var(--motion-normal) var(--ease-out),
+    color var(--motion-fast) ease;
+}
+
+.category-card:hover .category-icon {
+  transform: scale(1.12) rotate(-5deg);
+  color: #ff1740;
+}
+
+.category-title {
+  transition: transform var(--motion-normal) var(--ease-out);
+}
+
+.category-card:hover .category-title {
+  transform: translateX(4px);
+}
+
+.category-number {
+  transition:
+    color var(--motion-fast) ease,
+    transform var(--motion-normal) var(--ease-out);
+}
+
+.category-card:hover .category-number {
+  color: #777;
+  transform: translateX(-3px);
+}
+
+/* =========================================
+   CHOICE CARDS
+========================================= */
+
+.choice-card {
+  animation: choiceEnter 600ms var(--ease-out) both;
+}
+
+.choice-card:nth-child(1) {
+  animation-delay: 120ms;
+}
+
+.choice-card:nth-child(2) {
+  animation-delay: 220ms;
+}
+
+@keyframes choiceEnter {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.choice-card:hover .choice-symbol {
+  animation: symbolBounce 450ms var(--ease-out);
+}
+
+@keyframes symbolBounce {
+  0% {
+    transform: scale(1);
+  }
+
+  45% {
+    transform: scale(1.2) rotate(-5deg);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* =========================================
+   CHALLENGE REVEAL
+========================================= */
+
+.challenge-section {
+  animation: challengeReveal 550ms var(--ease-out) both;
+}
+
+@keyframes challengeReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.challenge-label {
+  animation: labelReveal 500ms var(--ease-out) both;
+}
+
+@keyframes labelReveal {
+  from {
+    opacity: 0;
+    letter-spacing: 7px;
+  }
+
+  to {
+    opacity: 1;
+    letter-spacing: 4px;
+  }
+}
+
+.challenge-card {
+  animation: challengeCardReveal 650ms 80ms var(--ease-out) both;
+}
+
+@keyframes challengeCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.challenge-player {
+  animation: fadeIn 450ms 250ms ease both;
+}
+
+.challenge-card p {
+  animation: questionReveal 650ms 320ms var(--ease-out) both;
+}
+
+@keyframes questionReveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.done-button {
+  animation: buttonReveal 500ms 450ms var(--ease-out) both;
+}
+
+@keyframes buttonReveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================================
+   DONE BUTTON
+========================================= */
+
+.done-button {
+  position: relative;
+
+  transition:
+    transform var(--motion-fast) var(--ease-out),
+    box-shadow var(--motion-normal) ease;
+}
+
+.done-button:hover {
+  box-shadow:
+    0 12px 35px rgba(229, 9, 55, 0.25);
+}
+
+.done-button:active {
+  transform: scale(0.97);
+}
+
+/* =========================================
+   ROLEPLAY
+========================================= */
+
+.roleplay-heading .turn-small {
+  animation: contentReveal 500ms 100ms var(--ease-out) both;
+}
+
+.roleplay-heading h1 {
+  animation: contentReveal 650ms 180ms var(--ease-out) both;
+}
+
+.roleplay-heading p {
+  animation: contentReveal 600ms 280ms var(--ease-out) both;
+}
+
+.roleplay-start {
+  animation: contentReveal 600ms 380ms var(--ease-out) both;
+}
+
+/* Roleplay result */
+
+.roleplay-result-header {
+  animation: contentReveal 600ms 100ms var(--ease-out) both;
+}
+
+.roles-grid {
+  animation: contentReveal 600ms 220ms var(--ease-out) both;
+}
+
+.scenario-box {
+  animation: contentReveal 600ms 320ms var(--ease-out) both;
+}
+
+.instructions-box {
+  animation: contentReveal 600ms 400ms var(--ease-out) both;
+}
+
+.roleplay-actions {
+  animation: contentReveal 600ms 500ms var(--ease-out) both;
+}
+
+/* =========================================
+   ROLE CARDS
+========================================= */
+
+.role-box {
+  transition:
+    border-color var(--motion-normal) ease,
+    transform var(--motion-normal) var(--ease-out),
+    background var(--motion-normal) ease;
+}
+
+.role-box:hover {
+  transform: translateY(-3px);
+
+  border-color: #571323;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(150, 0, 30, 0.10),
+      rgba(255, 255, 255, 0.02)
+    );
+}
+
+.role-box strong {
+  transition: color var(--motion-fast) ease;
+}
+
+.role-box:hover strong {
+  color: #ffffff;
+}
+
+/* =========================================
+   SCENARIO / INSTRUCTIONS
+========================================= */
+
+.scenario-box,
+.instructions-box {
+  transition:
+    border-color var(--motion-normal) ease,
+    transform var(--motion-normal) var(--ease-out);
+}
+
+.scenario-box:hover,
+.instructions-box:hover {
+  border-color: #353535;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   ROLEPLAY BUTTONS
+========================================= */
+
+.another-button,
+.finish-button {
+  transition:
+    transform var(--motion-fast) var(--ease-out),
+    background var(--motion-fast) ease,
+    border-color var(--motion-fast) ease;
+}
+
+.another-button:hover {
+  transform: translateY(-2px);
+}
+
+.another-button:active,
+.finish-button:active {
+  transform: scale(0.98);
+}
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-button {
+  transition:
+    color var(--motion-fast) ease,
+    border-color var(--motion-fast) ease,
+    transform var(--motion-fast) var(--ease-out);
+}
+
+.back-button:hover {
+  transform: translateX(-2px);
+}
+
+/* =========================================
+   MOBILE MOTION
+========================================= */
+
+@media (max-width: 700px) {
+  /*
+    On phones, hover doesn't exist.
+    Keep interactions quick and tactile.
+  */
+
+  .category-card:hover,
+  .choice-card:hover,
+  .role-box:hover,
+  .scenario-box:hover,
+  .instructions-box:hover {
+    transform: none;
+  }
+
+  .category-card:active {
+    transform: scale(0.975);
+  }
+
+  .choice-card:active {
+    transform: scale(0.975);
+  }
+
+  .role-box:active {
+    transform: scale(0.99);
+  }
+
+  .start-button:active:not(:disabled),
+  .roleplay-start:active,
+  .done-button:active,
+  .finish-button:active,
+  .another-button:active {
+    transform: scale(0.97);
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
