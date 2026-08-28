@@ -34,13 +34,13 @@ function Landing({ onStart }) {
           </div>
 
           <h1>
-            How well do
+            The Night of 
             <br />
-            <span>you know</span> each other?
+            <span>Fantacy SEX</span> , Fullfill Every Desire?
           </h1>
 
           <p>
-            Two players. One game. No audience.
+            Two players. One game. Fullfill Fanticies.
             Choose your names and let the night begin.
           </p>
         </div>

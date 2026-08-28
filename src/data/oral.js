@@ -100,6 +100,122 @@ export const oralData = {
       id: 25,
       text: "If you could pick one oral dare from this game for your partner to do to you right now, which one would it be?",
     },
+    {
+      id: 26,
+      text: "Will you ever taste your partner when he/she finishes/gushes",
+    },
+    {
+      id: 27,
+      text: "Will you ever taste your partner when he/she finishes/gushes",
+    },
+    {
+      id: 28,
+      text: "Will you ever taste your partner when he/she finishes/gushes",
+    },
+    {
+      id: 29,
+      text: "Will you ever taste your partner when he/she finishes/gushes",
+    },
+    {
+      id: 30,
+      text: "Will you ever taste your partner when he/she finishes/gushes",
+    },
+    {
+      id: 31,
+      text: "Will you ever taste your partner when he/she finishes/gushes",
+    },
+    {
+      id: 32,
+      text: "Will you ever taste your partner when he/she finishes/gushes",
+    },
+    {
+      id: 33,
+      text: "Will you ever taste your partner when he/she finishes/gushes",
+    },
+    {
+      id: 34,
+      text: "Will you ever taste your partner when he/she finishes/gushes",
+    },
+    {
+      id: 35,
+      text: "Will you ever taste your partner when he/she finishes/gushes",
+    },
+    {
+      id: 36,
+      text: "Will you ever taste your partner when he/she finishes/gushes",
+    },
+    {
+      id: 37,
+      text: "Will you ever taste your partner when he/she finishes/gushes",
+    },
+    {
+      id: 38,
+      text: "Will you ever taste your partner when he/she finishes/gushes",
+    },
+    {
+      id: 39,
+      text: "Will you ever taste your partner when he/she finishes/gushes",
+    },
+    {
+      id: 40,
+      text: "Will you ever taste your partner when he/she finishes/gushes",
+    },
+    {
+      id: 40,
+      text: "Will you ever try anal sex with proper lubrication",
+    },
+    {
+      id: 41,
+      text: "Will you ever try anal sex with proper lubrication",
+    },
+    {
+      id: 42,
+      text: "Will you ever try anal sex with proper lubrication",
+    },
+    {
+      id: 43,
+      text: "Will you ever try anal sex with proper lubrication",
+    },
+    {
+      id: 44,
+      text: "Will you ever try anal sex with proper lubrication",
+    },
+    {
+      id: 45,
+      text: "Will you ever try anal sex with proper lubrication",
+    },
+    {
+      id: 46,
+      text: "Will you ever try anal sex with proper lubrication",
+    },
+    {
+      id: 47,
+      text: "Will you ever try anal sex with proper lubrication",
+    },
+    {
+      id: 48,
+      text: "Will you ever try anal sex with proper lubrication",
+    },
+    {
+      id: 49,
+      text: "Will you ever try anal sex with proper lubrication",
+    },
+    {
+      id: 50,
+      text: "Will you ever try anal sex with proper lubrication",
+    },
+    {
+      id: 51,
+      text: "Will you ever try anal sex with proper lubrication",
+    },
+    {
+      id: 52,
+      text: "Will you ever try anal sex with proper lubrication",
+    },
+    {
+      id: 53,
+      text: "Will you ever try anal sex with proper lubrication",
+    },
   ],
 
   dare: [

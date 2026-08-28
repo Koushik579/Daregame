@@ -2353,6 +2353,14 @@ input {
   transform: translateX(-2px);
 }
 
+#chooserole span{
+  color: #f0143d;
+  font-size: large;
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin: 5px;
+}
+
 /* =========================================
    MOBILE MOTION
 ========================================= */

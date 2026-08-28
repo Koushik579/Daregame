@@ -100,12 +100,16 @@ function Roleplay({ players, onBack }) {
               </span>
 
               <h1>{currentRoleplay.title}</h1>
+
+              <br />
+              <p id="chooserole"><span>{players.playerOne}</span> & <span>{players.playerTwo}</span> choose your role</p>
+
             </div>
 
             <div className="roles-grid">
               <div className="role-box">
                 <span className="role-label">
-                  {players.playerOne}
+                  Role 1
                 </span>
 
                 <strong>
@@ -115,7 +119,7 @@ function Roleplay({ players, onBack }) {
 
               <div className="role-box">
                 <span className="role-label">
-                  {players.playerTwo}
+                  Role 2
                 </span>
 
                 <strong>

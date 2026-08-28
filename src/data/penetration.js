@@ -40,6 +40,46 @@ export const penetrationData = {
       id: 10,
       text: "Do you enjoy the feeling of having your climax taken and locked completely inside your partner's mouth?",
     },
+    {
+      id: 11,
+      text: "Will you ever try anal sex with proper lubrication",
+    },
+    {
+      id: 12,
+      text: "Will you ever try anal sex with proper lubrication",
+    },
+    {
+      id: 13,
+      text: "Will you ever try anal sex with proper lubrication",
+    },
+    {
+      id: 14,
+      text: "Will you ever try anal sex with proper lubrication",
+    },
+    {
+      id: 15,
+      text: "Will you ever try anal sex with proper lubrication",
+    },
+    {
+      id: 16,
+      text: "Will you ever taste your partner when he/she finishes/gushes",
+    },
+    {
+      id: 17,
+      text: "Will you ever taste your partner when he/she finishes/gushes",
+    },
+    {
+      id: 18,
+      text: "Will you ever taste your partner when he/she finishes/gushes",
+    },
+    {
+      id: 19,
+      text: "Will you ever taste your partner when he/she finishes/gushes",
+    },
+    {
+      id: 20,
+      text: "Will you ever taste your partner when he/she finishes/gushes",
+    },
   ],
 
   dare: [
