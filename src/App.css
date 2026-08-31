@@ -420,6 +420,13 @@
   font-size: 23px;
 }
 
+.category-icon-image {
+  display: block;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
 .category-content {
   position: relative;
 

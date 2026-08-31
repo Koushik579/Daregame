@@ -1,5 +1,9 @@
 import Logo from "../components/Logo";
 import CategoryCard from "../components/CategoryCard";
+import sexicon from "../assets/images/sexicon.png";
+import roleplayicon from "../assets/images/roleplay.png";
+import oralicon from "../assets/images/oral.png";
+import foreplayicon from "../assets/images/foreplay.png";
 
 function CategorySelection({
   players,
@@ -42,7 +46,13 @@ function CategorySelection({
         <div className="category-grid">
           <CategoryCard
             number="01"
-            icon="♥"
+            icon={
+              <img
+                className="category-icon-image"
+                src={foreplayicon}
+                alt=""
+              />
+            }
             title="Foreplay"
             description="Playful truths and dares"
             onClick={() =>
@@ -52,7 +62,13 @@ function CategorySelection({
 
           <CategoryCard
             number="02"
-            icon="◆"
+            icon={
+              <img
+                className="category-icon-image"
+                src={roleplayicon}
+                alt=""
+              />
+            }
             title="Roleplay"
             description="Step into a different character"
             onClick={() =>
@@ -62,7 +78,13 @@ function CategorySelection({
 
           <CategoryCard
             number="03"
-            icon="✦"
+            icon={
+              <img
+                className="category-icon-image"
+                src={oralicon}
+                alt=""
+              />
+            }
             title="Oral"
             description="Intimate truths and dares"
             onClick={() =>
@@ -72,7 +94,13 @@ function CategorySelection({
 
           <CategoryCard
             number="04"
-            icon="♠"
+            icon={
+              <img
+                className="category-icon-image"
+                src={sexicon}
+                alt=""
+              />
+            }
             title="Penetration"
             description="Deeper relationship challenges"
             onClick={() =>
